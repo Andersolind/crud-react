@@ -6,11 +6,31 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `How to run the backend`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+###
+
+# CRUD Starter Frontend
+
+This is the React frontend that goes with the [CRUD Starter API backend](https://github.com/Andersolind/node-postgres). It can, however, be used as a starter for any app that features get, post, put and delete requests.
+
+It uses Bootstrap styles and reactstrap, which creates Bootstrap components, to create a responsive data table that displays all data from a table in a database. It has a modal form for adding and editing items, a delete and edit button in each item row, and a button to download the entire database table into a CSV file.
+
+It uses react-csv to create the CSV download button.
+
+## Instructions
+
+**1. Clone this repo**
+
+```
+git clone https://github.com/andersolind/crud-starter-frontend.git
+```
+
+**2. NPM install React and dependencies**
+
+```
+npm install
+```
 
 ### `npm test`
 
