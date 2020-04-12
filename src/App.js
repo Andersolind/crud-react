@@ -23,6 +23,13 @@ class App extends Component {
     ]
   };
 
+  //  getItems= () => {
+  //   fetch('http://localhost:3000/crud')
+  //     .then(response => response.json())
+  //     .then(items => setItems(items))
+  //     .catch(err => console.log(err))
+  // }
+
   StartMarathon(input) {
     //lets sort it
 
@@ -54,12 +61,12 @@ class App extends Component {
     var minimumDate = new Date(Math.min.apply(null, dates));
   }
 
-  // getItems() {
-  //   fetch("http://localhost:3000/crud")
-  //     .then(response => response.json())
-  //     .then(items => this.setState({ items }))
-  //     .catch(err => console.log(err));
-  // }
+  getItems() {
+    fetch("https://repmyhoodie.herokuapp.com/crud")
+      .then(response => response.json())
+      .then(items => this.setState({ items }))
+      .catch(err => console.log(err));
+  }
 
   addItemToState = item => {
     this.setState(prevState => ({
@@ -85,7 +92,9 @@ class App extends Component {
     this.setState({ items: updatedItems });
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.getItems();
+  }
 
   render() {
     return (
