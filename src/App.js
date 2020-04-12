@@ -4,7 +4,7 @@ import ModalForm from "./Components/Modals/Modal";
 import DataTable from "./Components/Tables/DataTable";
 import { CSVLink } from "react-csv";
 import BlogPost from "./Components/Forms/Blog";
-import Header from "./Components/Header/Header";
+import Header from "./Components/Shared/Header/Header";
 class App extends Component {
   state = {
     items: [

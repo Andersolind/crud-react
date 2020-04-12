@@ -8,23 +8,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import BlogDetail from "./Components/Forms/BlogDetail";
-import Header from "./Components/Header/Header";
-// <Router history={appHistory} onUpdate={() => window.scrollTo(0, 0)}>
-// <Route path="/" component={ Detail } />
-// </Router>,
-// ReactDOM.render(<App />, document.getElementById("root"));
+import Header from "./Components/Shared/Header/Header";
+import Footer from "./Components/Shared/Footer/Footer";
 const routing = (
   <Router>
-    <Container className="App">
-      <div>
-        <Header />
-        <hr />
+    <div>
+      <Header />
+      <Container className="App">
         <Switch>
           <Route exact path="/" component={App} />
           <Route path="/detail/:blogPost" component={BlogDetail} exact />
         </Switch>
-      </div>
-    </Container>
+      </Container>
+      <Footer />
+    </div>
   </Router>
 );
 
